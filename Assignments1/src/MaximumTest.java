@@ -6,6 +6,7 @@ public class MaximumTest<T extends Comparable<T>> {
 		this.x = x;
 		this.y = y;
 		this.z = z;
+		
 	}
 
 	T x, y, z;
