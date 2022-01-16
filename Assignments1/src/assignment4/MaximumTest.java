@@ -1,3 +1,4 @@
+package assignment4;
 
 public class MaximumTest<T extends Comparable<T>> {
 
