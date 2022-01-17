@@ -26,8 +26,6 @@ public class AddressBookOperations {
 			String phoneNumber = in.nextLine();
 			System.out.print("Enter a address ");
 			String address = in.nextLine();
-
-			System.out.println("Do you want to add more?Y/N");
 			AddressBook addressbook = new AddressBook();
 			addressbook.setAddress(address);
 			addressbook.setPhoneNumber(phoneNumber);
@@ -35,12 +33,14 @@ public class AddressBookOperations {
 			addressbook.setLname(lname);
 			addressBookList.add(addressbook);
 
+			System.out.println("Do you want to add more?Y/N");
+			
 			if (in.nextLine().equals("N"))
 				done = true;
 
 		} while (!done);
 		in.close();
-		System.out.println(addressBookList.size());
+		System.out.println("Address Book Size "+addressBookList.size());
 		List<AddressBook> sortedaddressBookList = sortedListByFname(addressBookList);
 		System.out.println("Address Book Sorted");
 		print(sortedaddressBookList);
